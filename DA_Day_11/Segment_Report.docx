@@ -1,0 +1,163 @@
+# Customer Segmentation Analysis Using RFM and K-Means Clustering
+
+## Objective
+
+The objective of this project is to perform customer segmentation using RFM (Recency, Frequency, Monetary) analysis and K-Means clustering. The purpose is to identify distinct customer groups based on purchasing behavior and support targeted marketing strategies.
+
+---
+
+## Dataset Information
+
+Dataset Source: Kaggle Retail Customer Dataset
+
+Dataset Features:
+
+* Transaction ID
+* Date
+* Customer ID
+* Gender
+* Age
+* Product Category
+* Quantity
+* Price per Unit
+* Total Amount
+
+---
+
+## Tools and Technologies Used
+
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* Matplotlib
+* Jupyter Notebook
+
+---
+
+## Methodology
+
+### 1. Data Preparation
+
+The dataset was imported and cleaned. The Date column was converted into datetime format for time-based calculations.
+
+### 2. RFM Feature Engineering
+
+Three important customer behavior metrics were created:
+
+#### Recency (R)
+
+Number of days since the customer's last purchase.
+
+#### Frequency (F)
+
+Total number of transactions made by the customer.
+
+#### Monetary (M)
+
+Total amount spent by the customer.
+
+These metrics were calculated for each unique customer using Customer ID.
+
+### 3. Data Standardization
+
+The RFM values were standardized using StandardScaler to ensure equal contribution of each feature during clustering.
+
+### 4. Customer Segmentation Using K-Means
+
+K-Means clustering algorithm was applied to the standardized RFM data.
+
+Number of Clusters (K): 4
+
+The algorithm grouped customers into four distinct segments based on their purchasing behavior.
+
+---
+
+## Segment Profiles
+
+### Cluster 0 – VIP Customers
+
+Characteristics:
+
+* High purchase frequency
+* High spending amount
+* Recent purchases
+
+Marketing Strategy:
+
+* Premium offers
+* Exclusive rewards
+* Early access promotions
+
+### Cluster 1 – Loyal Customers
+
+Characteristics:
+
+* Regular purchases
+* Moderate spending
+* Consistent engagement
+
+Marketing Strategy:
+
+* Loyalty programs
+* Product recommendations
+* Cross-selling campaigns
+
+### Cluster 2 – New Customers
+
+Characteristics:
+
+* Recent customers
+* Low purchase history
+* Limited spending
+
+Marketing Strategy:
+
+* Welcome discounts
+* Onboarding campaigns
+* Personalized recommendations
+
+### Cluster 3 – At-Risk Customers
+
+Characteristics:
+
+* Long time since last purchase
+* Low engagement
+* Reduced spending
+
+Marketing Strategy:
+
+* Re-engagement campaigns
+* Discount coupons
+* Special promotional offers
+
+---
+
+## Results and Insights
+
+The customer segmentation process successfully identified groups of customers with similar purchasing patterns.
+
+Key Findings:
+
+* A small group of customers contributes significantly to overall revenue.
+* Loyal customers represent a stable source of recurring sales.
+* New customers require engagement strategies to improve retention.
+* At-risk customers can be targeted with recovery campaigns.
+
+---
+
+## Business Value
+
+Customer segmentation provides several business benefits:
+
+* Personalized marketing campaigns
+* Improved customer retention
+* Better customer understanding
+* Increased revenue opportunities
+* Efficient marketing budget allocation
+
+---
+
+## Conclusion
+
+RFM analysis combined with K-Means clustering is an effective approach for customer segmentation. The generated customer segments help businesses understand customer behavior and create targeted marketing strategies to improve customer satisfaction and business performance.
